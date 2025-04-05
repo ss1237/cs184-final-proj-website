@@ -17,6 +17,9 @@ body {
   font-variant: small-caps;
 }
 
+.hero-body {
+  padding-bottom: 0rem !important;
+}
 
 .teaser .hero-body {
   padding-top: 0;
