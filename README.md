@@ -4,6 +4,6 @@ This is the final project for CS 184: Computer Graphics and Imaging.
 
 ## Collaborators
 - Saathvik Selvan
-- Mehdi Kfifi
+- Mehdi Khfifi
 - Julia Isaac
 - Harbani Jaggi
