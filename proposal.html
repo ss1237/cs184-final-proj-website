@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="INSERT DESCRIPTION">
-  <meta name="keywords" content="INSERT KEYWORDS">
+        content="Shapeshift: Topology-Aware 3D Mesh Interpolation">
+  <meta name="keywords" content="3D Mesh Interpolation, Topology-Aware, Computer Graphics">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>INSERT TITLE</title>
+  <title>Shapeshift: Topology-Aware 3D Mesh Interpolation</title>
 
   <script>
     MathJax = {
@@ -72,56 +72,14 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">COOL TITLE</h1>
+          <h1 class="title is-1 publication-title">Shapeshift: Topology-Aware 3D Mesh Interpolation</h1>
           
           <div class="is-size-5 publication-authors">
             <span class="author-block mr-5">
-              <p>Saathvik Selvan</p>
-            </span>
-            <span class="author-block mr-5">
-              <p>3037666985</p>
-            </span>
-            <span class="author-block mr-5">
-              <p>sselvan@berkeley.edu</p>
+              <p>Saathvik Selvan, Mehdi Khfifi, Julia Isaac, Harbani Jaggi</p>
             </span>
           </div>
           
-          <div class="is-size-5 publication-authors">
-            <span class="author-block mr-5">
-              <p>Mehdi Kfifi</p>
-            </span>
-            <span class="author-block mr-5">
-              <p>SID</p>
-            </span>
-            <span class="author-block mr-5">
-              <p>EMAIL</p>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block mr-5">
-              <p>Julia Isaac</p>
-            </span>
-            <span class="author-block mr-5">
-              <p>SID</p>
-            </span>
-            <span class="author-block mr-5">
-              <p>EMAIL</p>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block mr-5">
-              <p>Harbani Jaggi</p>
-            </span>
-            <span class="author-block mr-5">
-              <p>SID</p>
-            </span>
-            <span class="author-block mr-5">
-              <p>EMAIL</p>
-            </span>
-          </div>
-
           <br />
           <div class="is-size-5 publication-authors">
             <span class="author-block"
@@ -144,7 +102,7 @@
         <h2 class="title is-3">Summary</h2>
         <div class="content has-text-justified">
           <p>
-            INSERT SUMMARY
+            For our final project, we propose Shapeshift, a system for interpolating between two 3D triangle meshes with differing topologies. Using the halfedge data structure, we will resample the source mesh to match the target's topology, then perform linear vertex interpolation to morph between the shapes. We may also explore shading and texture interpolation for smoother visual transitions.
           </p>
         </div>
       </div>
@@ -157,8 +115,25 @@
       <div class="column">
         <h2 class="title is-3">Problem Description</h2>
         <div class="content has-text-justified">
+          <div align="middle">
+            <img src="static/images/harrypotter.gif" alt="Harry Potter shapeshift scene" width="500" />
+          </div>
+          <br />
+
           <p>
-            INSERT PROBLEM DESCRIPTION
+            Our project, Shapeshift, tackles the challenge of interpolating between two 3D triangle meshes that differ in both geometry and topology. Inspired by visual effects in films such as the Harry Potter series — where characters transform seamlessly from one creature to another—we aim to simulate a similar mesh transformation process in a technically grounded way. Traditional mesh morphing techniques assume the source and target meshes share identical vertex counts and connectivity, but real-world models often do not meet this requirement. Our goal is to develop a pipeline that enables smooth transformations between arbitrary triangular meshes by aligning their topology and interpolating vertex positions.
+          </p>
+
+          <p>
+            We begin by representing both meshes using the halfedge data structure, which allows efficient traversal and local connectivity updates. To enable interpolation, we first resample the source mesh so that it matches the target mesh in terms of vertex count and face structure. This may involve either subdivision (upsampling) or simplification (downsampling), depending on which mesh is denser. We aim to preserve surface features as much as possible during this process to avoid introducing geometric artifacts.
+          </p>
+
+          <p>
+            Once the meshes have matching topologies, we compute a mapping between corresponding vertices. In the simplest case, this mapping will be based on vertex order, but we will explore proximity-based or feature-preserving matching to ensure higher-quality morphs. We then perform linear interpolation of vertex positions over a sequence of frames, producing a smooth animation from the source to the target mesh.
+          </p>
+
+          <p>
+            As optional extensions, we will consider interpolating vertex normals to preserve shading continuity during the transformation. We may also implement per-frame shading using the Phong model and experiment with interpolating texture coordinates if the models are textured. These additions will help enhance the visual realism of the morphing process.
           </p>
         </div>
       </div>
@@ -171,9 +146,30 @@
       <div class="column">
         <h2 class="title is-3">Goals and Deliverables</h2>
         <div class="content has-text-justified">
+          <h4>Baseline Goals</h4>
           <p>
-            INSERT GOALS AND DELIVERABLES
+            Our baseline objective is to implement a complete mesh interpolation pipeline for two 3D triangle meshes with different topologies. This includes:
           </p>
+          <ul>
+            <li>Representing input meshes using the halfedge data structure.</li>
+            <li>Performing upsampling or downsampling to ensure the source and target meshes have the same vertex count and topology.</li>
+            <li>Computing vertex correspondences and performing linear interpolation of vertex positions across time.</li>
+            <li>Generating a smooth morphing animation between the two meshes.</li>
+          </ul>
+          <p>
+            We aim to produce at least one clean morph sequence between two distinct meshes by the final project deadline.
+          </p>
+
+          <h4>Extension Goals</h4>
+          <p>
+            If time permits, we plan to explore several extensions to improve visual quality and add technical depth:
+          </p>
+          <ul>
+            <li>Interpolation of vertex normals to maintain smooth shading during the transformation.</li>
+            <li>Implementation of dynamic per-frame shading using the Phong model.</li>
+            <li>Interpolation of texture coordinates if the source and target meshes are textured.</li>
+            <li>Incorporation of more advanced vertex matching techniques to reduce artifacts while morphing.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -185,8 +181,24 @@
       <div class="column">
         <h2 class="title is-3">Schedule</h2>
         <div class="content has-text-justified">
+          <h4>Week 1 (April 7 - April 13):</h4>
           <p>
-            INSERT SCHEDULE
+            Set up the project workflow and development environment. Begin rendering 3D meshes using the halfedge data structure. Implement basic vertex movement and animation framework. Begin work on interpolation between two meshes with the same topology.
+          </p>
+
+          <h4>Week 2 (April 14 - April 20):</h4>
+          <p>
+            Finish implementing interpolation between two meshes with the same topology by performing linear vertex position blending. Work on and submit the milestone deliverable, including preliminary results and animations demonstrating interpolation with shared topology.
+          </p>
+
+          <h4>Week 3 (April 21 - April 27):</h4>
+          <p>
+            Focus on interpolation between meshes with differing topologies by implementing resampling techniques (e.g., subdivision or simplification). In parallel, begin working on normal interpolation and per-frame shading to improve visual smoothness.
+          </p>
+
+          <h4>Week 4 (April 28 - May 4):</h4>
+          <p>
+            Refine the morphing pipeline and address any bugs. Implement additional extension features if time permits (e.g., texture interpolation, better vertex matching). Begin preparing the final deliverable, generating polished images and animations to showcase results, and writing up the final report.
           </p>
         </div>
       </div>
@@ -200,7 +212,21 @@
         <h2 class="title is-3">Resources</h2>
         <div class="content has-text-justified">
           <p>
-            INSERT RESOURCES
+            We will be using the mesh editing and rendering framework provided in the CS 184 starter code as the foundation for our project. This includes support for the halfedge data structure, mesh visualization, and basic interaction tools.
+          </p>
+          <p>
+            For additional mesh models, we plan to use public 3D geometry datasets such as those available from <a href="https://sketchfab.com">Sketchfab</a> and <a href="http://graphics.stanford.edu/data/3Dscanrep/">Stanford's 3D Scanning Repository</a>. We will also use tools like Blender to manually inspect or preprocess meshes if necessary.
+          </p>
+          <p>
+            We will refer to research papers and online resources on traditional mesh morphing techniques to guide our implementation, including:
+          </p>
+          <ul>
+            <li><a href="https://diglib.eg.org/bitstream/handle/10.2312/egst20011048/mmstar.pdf">Mesh Morphing - Eurographics State-of-the-Art Report (2001)</a></li>
+            <li><a href="https://theses.hal.science/tel-00836048v1/file/ThA_se_MocanuBogdan.pdf">3D Mesh Morphing - Mocanu, 2013</a></li>
+            <li><a href="https://people.eecs.ku.edu/~s906s230/staten_et_al_imr20.pdf">A Comparison of Mesh Morphing Methods - Staten et al., 2009</a></li>
+          </ul>
+          <p>
+            All implementation will be done in C++ using OpenGL for rendering, with collaboration and version control managed via GitHub.
           </p>
         </div>
       </div>
