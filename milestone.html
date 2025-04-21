@@ -118,13 +118,22 @@
       <div class="column">
         <h2 class="title is-3">Milestone Progress</h2>
         <div class="content has-text-justified">
-          <h4>Some Part</h4>
+          <h4>Vertex Pairing with the Hungarian Algorithm</h4>
           <p>
-            Some description.
+          To begin, we match vertices from two different meshes. We treat the problem like an assignment problem and use the Hungarian Algorithm to pair each vertex from the first mesh to a vertex from the second mesh. The goal is to minimize the total distance between corresponding vertices.
           </p>
-          <h4>Some Other Part</h4>
+          <h4>Linear Interpolation of Vertices</h4>
           <p>
-            Some other description.
+            After the vertices are paired, we move each vertex from its starting position to its final destination. We use linear interpolation over time, ensuring a smooth and direct transition between the two meshes.
+          </p>
+          <h4>Rebuilding Faces and Half-Edges</h4>
+          <p>
+          Once the vertices are moved we rebuild the mesh connectivity. This involves reassigning faces and half-edges based on the new vertex positions, ensuring the structure of the mesh remains coherent after the morph.
+          </p>
+          <h4>(Future Work) Smoother Interpolation with Physics Based Forces</h4>
+          <p>
+            To further improve the smoothness of the transition, we are considering adding physics-based motion. What this means more specifically is that we would be assigning velocity and acceleration to each vertex
+            and introducing forces between initial and final positions. This would allow for more natural interpolation instead of a linear path.
           </p>
         </div>
       </div>
@@ -137,13 +146,17 @@
       <div class="column">
         <h2 class="title is-3">Progress Reflection</h2>
         <div class="content has-text-justified">
-          <h4>Some Part</h4>
+          <h4>Current Limitations in Efficiency</h4>
           <p>
-            Some description.
+            While our current approach successfully pairs and interpolates meshes it isn't the most efficient. The reliance on the Hungarian Algorithm for vertex pairing, while effective, can be computationally expensive for larger meshes.
           </p>
-          <h4>Some Other Part</h4>
+          <h4>Future Exploration: MAPS</h4>
           <p>
-            Some other description.
+            We plan to explore alternative methods like MAPS to improve performance and scalability. However, we did not have enough time to implement MAPS during this initial milestone.
+          </p>
+          <h4>Schedule Reflection</h4>
+          <p>
+          Overall our schedule stayed mostly on track. We were able to implement a basic mesh interpolation between two topologically equivalent meshes within the first two weeks as originally planned.
           </p>
         </div>
       </div>
