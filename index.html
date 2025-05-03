@@ -115,6 +115,13 @@
           <br />
           <div class="is-size-5 publication-authors">
             <span class="author-block"
+              ><b>Group 51</b></span
+            >
+          </div>
+
+          <br />
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"
               >CS 184, Computer Graphics and Imaging</span
             >
           </div>
@@ -123,7 +130,7 @@
 
           <span class="link-block">
             <a
-              href="https://github.com/mehdikhfifi/184"
+              href="https://github.com/mehdikhfifi/finalproject"
               target="_blank"
               class="external-link button is-normal is-rounded is-dark"
             >
@@ -167,20 +174,77 @@
   </div>
 </section> -->
 
+<section>
+  <div class="container is-max-desktop" style="margin-top: 2em">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Video Submissions</h2>
+        <div class="content has-text-centered">
+
+          <div class="buttons is-centered is-flex-direction-column">
+
+            <span class="link-block">
+              <a
+                href="https://www.youtube.com/watch?v=k1-075q1jbc"
+                target="_blank"
+                class="external-link button is-normal is-rounded is-dark"
+              >
+                <span class="icon">
+                  <i class="fas fa-video"></i>
+                </span>
+                <span>General Video Submission (2 Minutes)</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a
+                href="https://www.youtube.com/watch?v=hbrsVXDWyQc"
+                target="_blank"
+                class="external-link button is-normal is-rounded is-dark"
+              >
+                <span class="icon">
+                  <i class="fas fa-chalkboard-teacher"></i>
+                </span>
+                <span>Submission for TAs (5 Minutes)</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a
+                href="https://www.youtube.com/watch?v=JaxKgJPVJEk"
+                target="_blank"
+                class="external-link button is-normal is-rounded is-dark"
+              >
+                <span class="icon">
+                  <i class="fas fa-user-tie"></i>
+                </span>
+                <span>Submission for Professor Ren (1.5 Minutes)</span>
+              </a>
+            </span>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <section class="section">
-  <!--
+  
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column">
         <div align="center">
-          <video width="720" height="640" loop autoplay muted plays-inline>
-            <source src="static/videos/demo.mp4" type="video/mp4" />
+          <video width="400" loop autoplay muted plays-inline>
+            <source src="static/videos/ball_to_cube.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <br />
   <div class="container is-max-desktop" style="margin-top: 2em">
@@ -189,133 +253,116 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present Shapeshift which is a system for interpolating between two 3D triangle meshes with differing topologies. Traditional morphing techniques often assume topological consistency between source and target meshes, limiting their applicability in real-world shape transformations. Shapeshift addresses this by leveraging the halfedge data structure that we learnt and implemented in homework 3 to enable topology-aware interpolation. Our method first upsamples the source mesh, establishing vertex correspondences through geometric matching and projection onto the target mesh. Residual vertices are iteratively removed to ensure topological alignment. Once aligned, we perform linear vertex interpolation to generate smooth shape transitions. We additionally explore extensions such as shading and texture interpolation to enhance visual continuity.
+            We present Shapeshift which is a system for interpolating between two 3D triangle meshes with differing topologies. Traditional morphing techniques often assume topological consistency between source and target meshes, limiting their applicability in real-world shape transformations. Shapeshift addresses this by leveraging the halfedge data structure that we learnt and implemented in Homework 2 to enable topology-aware interpolation. Our method first upsamples the source mesh, establishing vertex correspondences through geometric matching and projection onto the target mesh. Residual vertices are iteratively removed to ensure topological alignment. Once aligned, we perform linear vertex interpolation to generate smooth shape transitions. We additionally explore extensions such as shading and texture interpolation to enhance visual continuity.
           </p>
         </div>
       </div>
     </div>
   </div>
 
-  <section>
-    <div class="container is-max-desktop" style="margin-top: 2em">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <h2 class="title is-3">Video Submissions</h2>
-          <div class="content has-text-justified">
-          
-            <div align="middle">
-              Video Submission:
-              <!-- <img
-                src="static/images/section.png"
-                align="middle"
-                width="400px"
-              /> -->
-            </div>
-  
-            <div align="middle">
-              Video Submission for TAs:
-              <!-- <img
-                src="static/images/section.png"
-                align="middle"
-                width="400px"
-              /> -->
-            </div>
-  
-            <div align="middle">
-              Video Submission for Professor Ren:
-              <!-- <img
-                src="static/images/section.png"
-                align="middle"
-                width="400px"
-              /> -->
-            </div>
-  
-          </div> <!-- end of content -->
-        </div> <!-- end of column -->
-      </div> <!-- end of columns -->
-    </div> <!-- end of container -->
-  </section>
-  
+  <div class="container is-max-desktop" style="margin-top: 2em">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Technical Approach</h2>
 
-
-</section>
-
-<div class="container is-max-desktop" style="margin-top: 2em">
-  <div class="columns is-centered has-text-centered">
-    <div class="column">
-      <h2 class="title is-3">Technical Approach</h2>
-      <div class="content has-text-justified">
-        <div align="middle">
-          <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/MI9cm_UNac4"
-            title="Example 1: Cylinder > Rectangular Prism"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-          
-<h4 class="title is-4">Vertex Pairing via the Hungarian Algorithm</h4>
-          <br />
+        <div class="content has-text-justified">
+          <h4>Vertex Pairing with the Hungarian Algorithm</h4>
           <p>
             The foundation of our morphing system is a vertex matching stage. We treat the problem of finding the mapping between the source and target mesh vertices as an assignment problem, where we minimize the global cost of pairing. The Hungarian Algorithm (Kuhn, 1955) makes a bijective mapping between vertices in the upsampled source mesh and the target mesh. This enables us to define a smooth one-to-one correspondence between shapes, even if their original vertex counts differ.
           </p>
-
-          <h4 class="title is-4">Mesh Upsampling, Scaling and Centroid Normalization</h4>
+          <br />
+          <h4>Mesh Upsampling, Scaling and Centroid Normalization</h4>
           <p>
             However, before we do the vertex mapping, how can we ensure that there is at least one vertex in the target mesh for each vertex in the source mesh? How can we actually do a mapping between them both? First, we have to set up the problem so that we can. This required some experimentation:
-To facilitate meaningful correspondences, we first upsample the source mesh using Loop subdivision until it contains at least twice as many vertices as the target mesh. This guarantees sufficient resolution to match the more compact target mesh features. Then, we normalize both meshes by translating them to place their centroids at the origin, removing biases introduced by file-specific coordinate systems.
-After normalization, we uniformly scale the source mesh until it completely encloses the target mesh. This empirical step ensures that vertices in the source mesh envelop all areas of the target shape, improving the likelihood that each region of the target mesh has a corresponding point nearby in the source mesh — particularly important for matching meshes with varying size or geometric scope.
-
           </p>
-
-          <h4 class="title is-4">Projection and Vertex Remapping</h4>
-
+          <p>
+            To facilitate meaningful correspondences, we first upsample the source mesh using Loop subdivision until it contains at least twice as many vertices as the target mesh. This guarantees sufficient resolution to match the more compact target mesh features. Then, we normalize both meshes by translating them to place their centroids at the origin, removing biases introduced by file-specific coordinate systems.
+          </p>
+          <p>
+            After normalization, we uniformly scale the source mesh until it completely encloses the target mesh. This empirical step ensures that vertices in the source mesh envelop all areas of the target shape, improving the likelihood that each region of the target mesh has a corresponding point nearby in the source mesh — particularly important for matching meshes with varying size or geometric scope.
+          </p>
           <br />
+          <h4>Projection and Vertex Remapping</h4>
           <p>
             After matching the two meshes spatially, some vertices in the source mesh may remain unmatched, particularly those added during the upsampling step. Rather than discard them or introduce artifacts, we project these unmatched vertices onto the surface of the target mesh using closest-point projection. This yields a plausible correspondence without requiring global surface parameterization.
+          </p>
+          <p>
             Once projected, these vertices are interpolated toward their nearest points on the target mesh surface, allowing us to preserve the full detail of the subdivided source while ensuring each point has a meaningful destination. This projection technique serves as a practical and flexible alternative to complex remeshing pipelines such as those in MAPS.
-                      </p>
-          
-                      <h4 class="title is-4">Vertex Interpolation and Temporal Morphing</h4>
-
-        
-        <br />
-        <p>
-        With all source vertices now assigned to final positions — either through Hungarian matching or projection — we use linear interpolation to morph between the original and target vertex positions. Over a user-defined number of frames, each vertex follows a straight-line path from its origin to destination.
-        This simple interpolation method works well due to the prior normalization, scaling, and matching steps, which ensure the morph appears globally smooth. It also avoids the numerical instability or complexity of solving partial differential equations, while still yielding perceptually pleasing transitions.
-        </p>
-
-        <h4 class="title is-4">Comparison to MAPS</h4>
-
-        
-        <br />
-        <p>
-        Our approach differs significantly from MAPS (Multiresolution Adaptive Parameterization of Surfaces) [Lee et al., 1998], which requires manually creating a shared base domain between two meshes and constructing hierarchical parameterizations. However, our method was heavily inspired from MAPS. Instead of manually creating a shared base domain for the two given meshes, our method of upsampling and Hungarian matching creates a pseudo-base domain that can be used as a connection between the two meshes. Afterwards, we discard the hierarchical parameterizations in favor of a simple linear interpolation in favor of ease of implementation and greater flexibility. This meant that we were only able to work with simpler, genus-0 meshes, which was acceptable for our project goals.
-       </p>
-
-      <h4 class="title is-4">Problems & Lessons Learned</h4>
-      
-      <br />
-      <p>
-      As seen in our midpoint, our initial implementation was a simple Hungarian matching, which we thought would suffice for all topologically-equivalent meshes. However, as we experimented with more meshes, we realized that a more complex approach would be needed. This led us to explore the MAPS paper, from which we decided it would be best to utilize the idea of a shared base domain. Since it would be infeasible to construct a unique shared base domain for any two meshes, we decided to upsample our initial mesh and then apply the Hungarian algorithm, essentially treating the final mesh as the base domain, of which the initial mesh had 1-1 mappings to. 
-
-     </p>
-
-
-            
+          </p>
+          <br />
+          <h4>Vertex Interpolation and Temporal Morphing</h4>
+          <p>
+            With all source vertices now assigned to final positions — either through Hungarian matching or projection — we use linear interpolation to morph between the original and target vertex positions. Over a user-defined number of frames, each vertex follows a straight-line path from its origin to destination.
+          </p>
+          <p>
+            This simple interpolation method works well due to the prior normalization, scaling, and matching steps, which ensure the morph appears globally smooth. It also avoids the numerical instability or complexity of solving partial differential equations, while still yielding perceptually pleasing transitions.
+          </p>
+          <br />
+          <h4>Comparison to MAPS</h4>
+          <p>
+            Our approach differs significantly from MAPS (Multiresolution Adaptive Parameterization of Surfaces) [Lee et al., 1998], which requires manually creating a shared base domain between two meshes and constructing hierarchical parameterizations. However, our method was heavily inspired from MAPS. Instead of manually creating a shared base domain for the two given meshes, our method of upsampling and Hungarian matching creates a pseudo-base domain that can be used as a connection between the two meshes. Afterwards, we discard the hierarchical parameterizations in favor of a simple linear interpolation in favor of ease of implementation and greater flexibility. This meant that we were only able to work with simpler, genus-0 meshes, which was acceptable for our project goals.
+          </p>
+          <br />
+          <h4>Problems & Lessons Learned</h4>
+          <p>
+            As seen in our midpoint presentation, our initial implementation used simple Hungarian matching, which we believed would suffice for all topologically equivalent meshes. However, as we experimented with more complex examples, we realized that a more sophisticated approach was necessary. This led us to explore the MAPS paper, from which we adopted the idea of a shared base domain. Since constructing a unique shared base domain for any two meshes would be infeasible, we instead chose to upsample our initial mesh and apply the Hungarian algorithm – effectively treating the final mesh as the base domain, with the upsampled initial mesh having one-to-one mappings to it.
+          </p>
+          <p>
+            Another point of improvisation arose when assigning the unmapped source vertices after the Hungarian matching. In traditional MAPS, it is often necessary to maintain the subdivision hierarchy to reverse it and project unmatched vertices onto the base domain. After implementing vertex deletion and attempting this approach, we found it too complex for our scope – leading us to adopt linear interpolation for the final morphing step.
+          </p>
         </div>
       </div>
     </div>
   </div>
 
-</section>
+  <div class="container is-max-desktop" style="margin-top: 2em">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <h4>Initial Hungarian Matching</h4>
+          <div class="columns">
+            <div class="column">
+              <video width="100%" controls>
+                <source src="static/videos/mesh_morph.mov" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video width="100%" controls>
+                <source src="static/videos/mesh_morph_with_shading.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+  
+          <h4>Final Morphing Examples</h4>
+          <div class="columns">
+            <div class="column">
+              <video width="100%" controls>
+                <source src="static/videos/ico_to_cylinder.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video width="100%" controls>
+                <source src="static/videos/cylinder_to_cube.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+  
+          <div class="columns">
+            <div class="column">
+              <video width="100%" controls>
+                <source src="static/videos/ball_to_cube.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="column">
+              <video width="100%" controls>
+                <source src="static/videos/ball_to_ico.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
 
 <div class="container is-max-desktop" style="margin-top: 2em">
   <div class="columns is-centered has-text-centered">
@@ -324,14 +371,24 @@ After normalization, we uniformly scale the source mesh until it completely encl
       <div class="content has-text-justified">
         <h4>Saathvik Selvan</h4>
         <ul>
-          <li>stuff</li>
-          <li>stuff</li>
+          <li>Implemented mesh upsampling, scaling, centroid normalization, and final interpolation after matching and projection were completed.</li>
+          <li>Added shading to the meshes, as seen in the final morphing examples.</li>
+          <li>Generated the videos used in the final morphing examples for the report and slides.</li>
         </ul>
-        <h4>NAME</h4>
+
+        <h4>Harbani Jaggi</h4>
         <ul>
-          <li>stuff</li>
-          <li>stuff</li>
+          <li>Contributed to the ideation and development of projection, remapping, interpolation, and topology reconstruction.</li>
+          <li>Created the Technical Approach section of the webpage and slides.</li>
         </ul>
+
+        <h4>Mehdi Khfifi</h4>
+        <ul>
+          <li>Modified the initial HW2 codebase to support loading two meshes and added animation functionality.</li>
+          <li>Implemented the Hungarian matching algorithm and linear interpolation for the milestone.</li>
+          <li>Helped brainstorm strategies for handling different topologies using upsampling and Loop subdivision.</li>
+        </ul>
+
       </div>
     </div>
   </div>
